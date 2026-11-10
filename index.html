@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>أيمن | AYMO — رابط البايو الرسمي | Bio Link</title>
+  
+  <!-- SEO & Open Graph Metadata -->
+  <meta name="description" content="الرابط الرسمي للبايو للكاتب والروائي وصانع المحتوى الجزائري أيمن (AYMO) — أول وأصغر شاب في الجزائر يؤلف رواية بذرة الأمل. جميع الروابط، قنوات التواصل، وطلب الرواية.">
+  <meta name="keywords" content="أيمن, AYMO, aymo_off, رواية بذرة الأمل, أصغر كاتب في الجزائر, كاتب جزائري, Bio Link, Aymen AS, aymo novels">
+  <meta name="author" content="أيمن | AYMO">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="أيمن | AYMO — رابط البايو الرسمي | Bio Link">
+  <meta property="og:description" content="أول وأصغر كاتب في الجزائر يؤلف رواية بذرة الأمل • AUTHOR & DIGITAL CREATOR">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="ar_DZ">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="أيمن | AYMO — Bio Link">
+  <meta name="twitter:description" content="الرابط الرسمي للبايو للكاتب الجزائري أيمن (AYMO) - مؤلف رواية بذرة الأمل">
+  <meta name="twitter:image" content="assets/logo.png">
+  
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cinzel:wght@700;800;900&family=Outfit:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="biolink-theme preloader-locked">
+
+  <!-- ========================================================
+       PRELOADER — 3-SECOND LUXURY CINEMATIC EXPERIENCE
+       ======================================================== -->
+  <div id="pagePreloader" class="page-preloader" aria-label="شاشة التحميل">
+    <div class="preloader-bg-glow" aria-hidden="true"></div>
+    <div class="preloader-grain" aria-hidden="true"></div>
+
+    <div class="preloader-card">
+      <!-- Animated Logo Ring with Pulse -->
+      <div class="preloader-logo-wrapper">
+        <div class="preloader-ring-pulse" aria-hidden="true"></div>
+        <div class="preloader-ring-spin" aria-hidden="true"></div>
+        <img src="assets/logo.png" alt="أيمن — AYMO" class="preloader-logo-img" width="110" height="110">
+      </div>
+
+      <!-- Identity Typography -->
+      <div class="preloader-brand">
+        <h1 class="preloader-name-en">AYMEN | AYMO</h1>
+        <p class="preloader-name-ar">أيمن — كاتب وروائي جزائري</p>
+        <div class="preloader-roles">
+          <span>AUTHOR</span>
+          <span class="gold-sep">•</span>
+          <span>NOVELIST</span>
+          <span class="gold-sep">•</span>
+          <span>DIGITAL CREATOR</span>
+        </div>
+      </div>
+
+      <!-- 3-Second Progress Bar & Counter -->
+      <div class="preloader-loader-box">
+        <div class="preloader-bar-track">
+          <div id="preloaderBarFill" class="preloader-bar-fill"></div>
+        </div>
+        <div class="preloader-meta-row">
+          <span id="preloaderStatusMsg" class="preloader-status-msg">جاري استدعاء النصوص ورواية بذرة الأمل...</span>
+          <span id="preloaderCounter" class="preloader-counter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient Particle Canvas & Lighting -->
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="bg-vignette" aria-hidden="true"></div>
+  <div class="bg-neon-ambient bg-neon-1" aria-hidden="true"></div>
+  <div class="bg-neon-ambient bg-neon-2" aria-hidden="true"></div>
+  <div class="bg-neon-ambient bg-neon-3" aria-hidden="true"></div>
+  <div class="bg-grain" aria-hidden="true"></div>
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- BIO LINK MAIN CONTAINER (Centered App Layout) -->
+  <div class="biolink-wrapper">
+
+    <!-- Top Minimalist Bar: Share & Sound Actions -->
+    <header class="biolink-topbar">
+      <div class="topbar-brand">
+        <img src="assets/logo.png" alt="AYMO Logo" class="topbar-mini-logo" width="28" height="28">
+        <span class="topbar-verified">الحساب الرسمي الموثّق 🇩🇿</span>
+      </div>
+      <div class="topbar-actions">
+        <!-- Share Bio Link Button -->
+        <button id="shareBioBtn" class="topbar-btn" title="مشاركة رابط البايو" aria-label="مشاركة رابط البايو">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+
+    <!-- ========================================================
+         HERO SECTION — SIGNATURE VISUAL IDENTITY
+         Portrait & All Text/Buttons Directly Inside The 3D Container
+         ======================================================== -->
+    <section class="biolink-hero" id="hero">
+      
+      <div class="hero-stage-wrap">
+        <!-- Portrait Graphic of Aymen with the 3D Neon Container -->
+        <img 
+          src="assets/hero.png" 
+          alt="أيمن (AYMO) — كاتب وروائي جزائري مؤلف رواية بذرة الأمل" 
+          class="hero-portrait-img"
+          width="438"
+          height="569"
+          fetchpriority="high"
+        >
+
+        <!-- All Content Placed Directly Inside The Image's 3D Container -->
+        <div class="neon-inner-content">
+          <!-- Full Name INSIDE Container -->
+          <h1 class="neon-hero-name">
+            <span class="name-en">AYMEN | AYMO</span>
+            <span class="name-ar">أيمن — مؤلف بذرة الأمل</span>
+          </h1>
+
+          <!-- Role Subtitle with Gold Separators (matching signature identity) -->
+          <p class="neon-hero-role">
+            <span>DIGITAL CREATOR</span>
+            <span class="gold-sep">•</span>
+            <span>NOVELIST</span>
+            <span class="gold-sep">•</span>
+            <span>AUTHOR</span>
+          </p>
+
+          <!-- Short Arabic Description -->
+          <div class="neon-quote-box">
+            <p class="neon-quote-text" dir="rtl">
+              "أول وأصغر كاتب في الجزائر يؤلف رواية بذرة الأمل"
+            </p>
+          </div>
+
+          <!-- Two CTA Buttons Inside Container -->
+          <div class="neon-cta-row">
+            <a href="#orderModal" class="btn-neon-primary open-order-modal">
+              <span>طلب رواية بذرة الأمل</span>
+              <span class="btn-arrow-sym">↓</span>
+            </a>
+            <a href="#tab-links" class="btn-neon-glass">
+              <span class="btn-arrow-sym">←</span>
+              <span>روابط التواصل والمتابعة</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ========================================================
+         PROFILE SECTION — PREMIUM GLASS CARD & METRICS
+         ======================================================== -->
+    <section class="biolink-profile-card" id="profile">
+      <div class="profile-card-glass">
+        
+        <div class="profile-avatar-row">
+          <div class="avatar-holder">
+            <div class="avatar-ring-animated" aria-hidden="true"></div>
+            <img src="assets/logo.png" alt="أيمن — AYMO" class="avatar-img" width="84" height="84">
+            <span class="avatar-check-badge" title="موثّق">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="#1da1f2"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            </span>
+          </div>
+
+          <div class="profile-text-meta">
+            <div class="profile-name-line">
+              <h2 class="profile-name">أيمن | AYMO</h2>
+              <span class="algeria-flag" title="الجزائر">🇩🇿</span>
+            </div>
+            <a href="https://www.instagram.com/aymo_off?psln=MXh0Z3dya2R1b2Yzcg==" target="_blank" rel="noopener noreferrer" class="profile-handle">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>@aymo_off</span>
+            </a>
+            <p class="profile-tagline">أول أصغر شاب في الجزائر يؤلف رواية بذرة الأمل • Création digitale</p>
+          </div>
+        </div>
+
+        <!-- Bio Metric Counters Strip -->
+        <div class="profile-metrics-strip">
+          <div class="metric-item">
+            <span class="metric-num" data-target="3">3</span><span class="metric-suffix">K+</span>
+            <span class="metric-lbl">متابع إنستغرام</span>
+          </div>
+          <div class="metric-div"></div>
+          <div class="metric-item">
+            <span class="metric-num" data-target="1">1</span><span class="metric-suffix">رواية</span>
+            <span class="metric-lbl">بذرة الأمل</span>
+          </div>
+          <div class="metric-div"></div>
+          <div class="metric-item">
+            <span class="metric-num" data-target="58">58</span><span class="metric-suffix">ولاية</span>
+            <span class="metric-lbl">توصيل متاح</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         NAVIGATION PILLS / FILTER TABS
+         ======================================================== -->
+    <nav class="biolink-nav-tabs" aria-label="أقسام البايو">
+      <button class="nav-pill active" data-tab="links">جميع الروابط</button>
+      <button class="nav-pill" data-tab="book">رواية بذرة الأمل</button>
+      <button class="nav-pill" data-tab="gallery">معرض الكتاب</button>
+      <button class="nav-pill" data-tab="about">عن الكاتب</button>
+      <button class="nav-pill" data-tab="contact">تواصل وواتساب</button>
+    </nav>
+
+
+    <!-- ========================================================
+         TAB 1: SOCIAL MEDIA & BIO LINKS
+         ======================================================== -->
+    <section class="biolink-section tab-content active" id="tab-links">
+
+      <!-- 1. FEATURED HIGHLIGHT: THE BOOK ORDER FORM -->
+      <a href="#orderModal" class="bio-link-card card-featured open-order-modal">
+        <div class="card-glow-border"></div>
+        <div class="card-icon-box icon-gold">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="card-text-box">
+          <div class="card-head-row">
+            <span class="card-title">طلب رواية "بذرة الأمل"</span>
+            <span class="card-badge badge-gold">فورمولار لـ 58 ولاية 🇩🇿</span>
+          </div>
+          <p class="card-sub">اضغط هنا لملء استمارة الطلب المباشرة والتوصيل حتى باب المنزل</p>
+        </div>
+        <div class="card-arrow-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+      </a>
+
+      <!-- 2. WHATSAPP DIRECT -->
+      <a href="https://wa.me/qr/SSEPKBSWPJ5WE1" target="_blank" rel="noopener noreferrer" class="bio-link-card card-whatsapp">
+        <div class="card-glow-border"></div>
+        <div class="card-icon-box icon-whatsapp">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12.031 0C5.396 0 .029 5.367.029 11.987c0 2.112.551 4.175 1.597 5.99L0 24l6.208-1.598c1.745.952 3.717 1.455 5.823 1.455 6.635 0 12.002-5.367 12.002-11.987C24.033 5.367 18.666 0 12.031 0zm0 21.84c-1.85 0-3.666-.497-5.253-1.44l-.377-.224-3.899 1.002 1.042-3.799-.246-.392a9.92 9.92 0 0 1-1.523-5.001c0-5.485 4.464-9.949 9.956-9.949 2.658 0 5.157 1.035 7.037 2.915a9.89 9.89 0 0 1 2.915 7.034c0 5.485-4.464 9.949-9.956 9.949zm5.457-7.464c-.299-.15-1.77-.873-2.044-.973-.274-.1-.473-.15-.672.15-.199.299-.772.973-.946 1.173-.174.199-.349.224-.648.075-.299-.15-1.263-.466-2.406-1.485-.889-.793-1.489-1.773-1.663-2.072-.174-.299-.019-.461.13-.61.134-.134.299-.349.448-.523.149-.174.199-.299.299-.498.1-.199.05-.374-.025-.523-.075-.15-.672-1.62-.921-2.219-.242-.583-.487-.504-.672-.513l-.573-.01c-.199 0-.523.075-.797.374-.274.299-1.046 1.022-1.046 2.493 0 1.471 1.071 2.891 1.221 3.09 1.495 1.994 3.493 3.42 5.378 4.148 2.05.793 2.846.721 3.864.57 1.121-.166 2.443-1.001 2.787-1.968.344-.967.344-1.794.244-1.968-.1-.174-.299-.274-.598-.424z"/>
+          </svg>
+        </div>
+        <div class="card-text-box">
+          <div class="card-head-row">
+            <span class="card-title">WhatsApp المباشر</span>
+            <span class="card-badge badge-whatsapp">@AYMO_OFF</span>
+          </div>
+          <p class="card-sub">راسلني مباشرة أو اطلب الرواية عبر محادثة واتساب الرسمية</p>
+        </div>
+        <div class="card-arrow-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+      </a>
+
+      <!-- 3. INSTAGRAM OFFICIAL -->
+      <a href="https://www.instagram.com/aymo_off?psln=MXh0Z3dya2R1b2Yzcg==" target="_blank" rel="noopener noreferrer" class="bio-link-card card-instagram">
+        <div class="card-glow-border"></div>
+        <div class="card-icon-box icon-instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </div>
+        <div class="card-text-box">
+          <div class="card-head-row">
+            <span class="card-title">Instagram الرسمي</span>
+            <span class="card-badge badge-pink">@aymo_off</span>
+          </div>
+          <p class="card-sub">الحساب الرسمي: اليوميات، معارض الكتاب، والتفاعل المباشر</p>
+        </div>
+        <div class="card-arrow-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+      </a>
+
+      <!-- 4. SNAPCHAT -->
+      <a href="https://www.snapchat.com/add/aymench2010?share_id=mKWN4h8Y4iQ&locale=ar-DZ" target="_blank" rel="noopener noreferrer" class="bio-link-card card-snapchat">
+        <div class="card-glow-border"></div>
+        <div class="card-icon-box icon-snapchat">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.225-.061.524.122.868l.015.016c.06.136 1.535 3.494 4.817 4.037.421.075.565.435.421.721-.24.48-1.278.835-3.163 1.073-.059.091-.12.378-.165.574-.029.18-.075.361-.134.555-.075.271-.271.406-.556.406h-.03c-.15 0-.33-.03-.54-.075a6.002 6.002 0 0 1-1.279-.135c-.3 0-.6.015-.915.075-.602.105-1.13.466-1.733.886-.857.601-1.833 1.294-3.31 1.294-.06 0-.12-.015-.18-.015h-.15c-1.477 0-2.453-.678-3.31-1.294-.602-.42-1.131-.781-1.734-.886-.315-.06-.615-.075-.915-.075-.375 0-.705.045-.93 0-.21-.03-.39-.075-.54-.15a.56.56 0 0 1-.3-.421c-.06-.192-.09-.39-.135-.57-.045-.183-.106-.495-.166-.573-1.928-.224-2.968-.578-3.208-1.231-.076-.21-.055-.495.165-.676 3.282-.543 4.757-3.901 4.818-4.037l.015-.03c.182-.345.227-.65.121-.873-.195-.436-.889-.66-1.348-.812-.136-.044-.256-.089-.346-.12-.824-.329-1.228-.719-1.213-1.168 0-.36.285-.689.735-.838.15-.061.327-.09.508-.09.12 0 .3.016.465.104.374.181.633.285.934.301.198 0 .326-.045.401-.09-.008-.165-.018-.33-.031-.51l-.002-.06C4.412 8.073 4.286 6.047 4.815 4.854 6.398 1.309 9.755 1.033 12.002 1.033h.204Z"/>
+          </svg>
+        </div>
+        <div class="card-text-box">
+          <div class="card-head-row">
+            <span class="card-title">Snapchat</span>
+            <span class="card-badge badge-snapchat">@aymench2010</span>
+          </div>
+          <p class="card-sub">كواليس حصرية، يوميات، ومقاطع عفوية مع الأصدقاء على سناب شات</p>
+        </div>
+        <div class="card-arrow-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+      </a>
+
+      <!-- 5. FACEBOOK PROFILE -->
+      <a href="https://www.facebook.com/share/1BK8o17vcD/" target="_blank" rel="noopener noreferrer" class="bio-link-card card-facebook">
+        <div class="card-glow-border"></div>
+        <div class="card-icon-box icon-facebook">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </div>
+        <div class="card-text-box">
+          <div class="card-head-row">
+            <span class="card-title">Facebook</span>
+            <span class="card-badge badge-blue">Aymen AS</span>
+          </div>
+          <p class="card-sub">الصفحة والحساب الشخصي على فيسبوك للتواصل والنقاشات</p>
+        </div>
+        <div class="card-arrow-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+      </a>
+
+      <!-- 6. THE NOVEL INSTAGRAM -->
+      <a href="https://www.instagram.com/aymo.novels" target="_blank" rel="noopener noreferrer" class="bio-link-card card-instagram">
+        <div class="card-glow-border"></div>
+        <div class="card-icon-box icon-instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </div>
+        <div class="card-text-box">
+          <div class="card-head-row">
+            <span class="card-title">حساب الرواية</span>
+            <span class="card-badge badge-gold">@aymo.novels</span>
+          </div>
+          <p class="card-sub">اقتباسات حصرية، أخبار الطبعات وحفلات التوقيع الخاصة برواية بذرة الأمل</p>
+        </div>
+        <div class="card-arrow-box">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+        </div>
+      </a>
+
+    </section>
+
+
+    <!-- ========================================================
+         TAB 2: THE NOVEL "بذرة الأمل"
+         ======================================================== -->
+    <section class="biolink-section tab-content" id="tab-book">
+      <div class="bio-panel-header">
+        <span class="panel-tag">THE MASTERPIECE NOVEL</span>
+        <h3 class="panel-title">رواية "بذرة الأمل"</h3>
+        <p class="panel-desc">أول عمل روائي متكامل لأصغر كاتب وشاب في الجزائر</p>
+      </div>
+
+      <!-- Hero Book Card -->
+      <div class="book-hero-showcase">
+        <img src="assets/book_badrat_alamal.png" alt="غلاف رواية بذرة الأمل" class="book-cover-large">
+        <div class="book-hero-meta">
+          <span class="card-badge badge-gold">رواية رسمية منشورة</span>
+          <h4>رواية بذرة الأمل</h4>
+          <p>
+            تأليف: <strong>أيمن عبد السلام (AYMO)</strong><br>
+            عمل أدبي ملهم يغوص في معاني الإصرار والنهوض من تحت ركام اليأس، ليغرس بذرة من النور في قلوب القراء والشباب التائهين.
+          </p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+            <a href="#orderModal" class="btn-mini-order open-order-modal" style="padding: 10px 18px; background: #752033; color:#fff; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+              <span>✍️ ملء استمارة طلب الرواية &larr;</span>
+            </a>
+            <a href="https://wa.me/qr/SSEPKBSWPJ5WE1" target="_blank" rel="noopener noreferrer" class="btn-mini-order" style="padding: 10px 18px; background: #25D366; color:#000; font-weight:700;">
+              <span>طلب مباشر عبر واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="distributor-callout">
+        <span>🚚 خدمة التوصيل متوفرة لجميع ولايات الجزائر الـ 58 والدول العربية</span>
+        <a href="https://www.instagram.com/aymo.novels" target="_blank" rel="noopener noreferrer">تواصل معنا عبر @aymo.novels &larr;</a>
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         TAB 3: BOOK FAIR & GALLERY (معرض الكتاب واللقاءات)
+         ======================================================== -->
+    <section class="biolink-section tab-content" id="tab-gallery">
+      <div class="bio-panel-header">
+        <span class="panel-tag">MEDIA & BOOK FAIRS</span>
+        <h3 class="panel-title">معارض الكتاب واللقاءات</h3>
+        <p class="panel-desc">لحظات توقيع الرواية واللقاءات التلفزيونية في صالون الكتاب الدولي</p>
+      </div>
+
+      <div class="fair-gallery-grid">
+        <div class="fair-gallery-item">
+          <img src="assets/aymen_fair_1.png" alt="أيمن في صالون الكتاب مع الرواية">
+          <div class="fair-gallery-caption">صالون الكتاب الدولي 📚</div>
+        </div>
+        <div class="fair-gallery-item">
+          <img src="assets/aymen_interview.png" alt="لقاء تلفزيوني وإعلامي مع أيمن">
+          <div class="fair-gallery-caption">تغطية إعلامية وتلفزيونية 🎙️</div>
+        </div>
+        <div class="fair-gallery-item">
+          <img src="assets/aymen_fair_2.png" alt="توقيع الرواية في الجناح">
+          <div class="fair-gallery-caption">جلسات التوقيع والإهداء ✨</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         TAB 4: ABOUT ME (عن الكاتب أيمن)
+         ======================================================== -->
+    <section class="biolink-section tab-content" id="tab-about">
+      <div class="about-bio-card">
+        <div class="about-quote-header">
+          <span class="quote-mark">“</span>
+          <p class="quote-text">"أول وأصغر شاب في الجزائر يؤلف رواية بذرة الأمل.. لأن الأحلام الكبيرة لا تعترف بالأعمار."</p>
+          <span class="quote-author">— أيمن | AYMO</span>
+        </div>
+
+        <div class="about-bio-body">
+          <p>
+            أنا <strong>أيمن (AYMO)</strong>، كاتب وروائي وصانع محتوى جزائري، عُرفت بكوني أصغر مؤلف يصدر رواية متكاملة بعنوان <strong>"بذرة الأمل"</strong>.
+          </p>
+          <p>
+            أسعى من خلال كتاباتي إلى إشعال شمعة الأمل في دروب القراء والشباب، وإثبات أن الإرادة والكلمة الصادقة قادرتان على فتح أبواب الإبداع والمشاركة في أكبر المحافل الأدبية كمعرض الجزائر الدولي للكتاب.
+          </p>
+        </div>
+
+        <div class="about-emblem-showcase">
+          <div class="emblem-img-wrap">
+            <img src="assets/logo.png" alt="شعار أيمن الرسمي — AYMO Crest" class="about-emblem-img" width="96" height="96">
+          </div>
+          <div class="about-emblem-meta">
+            <span class="emblem-tag">الهوية البصرية الرسمية</span>
+            <h4>شعار AYMO الأدبي</h4>
+            <p>يجمع الشعار بين الكتاب المفتوح، ريشة الإبداع الذهبية، وقمم الجبال التي ترمز لرحلة بطل رواية "بذرة الأمل" نحو القمة.</p>
+          </div>
+        </div>
+
+        <div class="about-pillars-mini">
+          <div class="pillar-mini">
+            <span class="p-icon">📖</span>
+            <div>
+              <strong>الأدب والرواية</strong>
+              <p>رواية بذرة الأمل ومشاريع أدبية قادمة</p>
+            </div>
+          </div>
+          <div class="pillar-mini">
+            <span class="p-icon">🌟</span>
+            <div>
+              <strong>صناعة المحتوى والإلهام</strong>
+              <p>محتوى إيجابي ملهم للشباب العربي</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========================================================
+         TAB 5: CONTACT & QUICK MESSAGE FORM (تواصل وواتساب)
+         ======================================================== -->
+    <section class="biolink-section tab-content" id="tab-contact">
+      <div class="bio-panel-header">
+        <span class="panel-tag">DIRECT CONNECTION</span>
+        <h3 class="panel-title">تواصل سريع</h3>
+        <p class="panel-desc">للإعلانات، الاستفسارات، أو إرسال رسالة مباشرة لأيمن</p>
+      </div>
+
+      <!-- Quick Message Form (فورمولار تواصل سريع) -->
+      <form id="bioContactForm" class="bio-quick-form" novalidate>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom: 12px;">
+          <span style="font-size: 1.25rem;">⚡</span>
+          <h4 style="margin: 0; font-family: var(--font-arabic-heading); color: #fff; font-size: 1.05rem;">فورمولار تواصل سريع</h4>
+        </div>
+        <p style="font-size: 0.84rem; color: var(--text-secondary); margin-bottom: 14px; margin-top: -4px;">
+          أرسل رسالتك أو استفسارك مباشرة وسيتم الرد عليك في أقرب وقت:
+        </p>
+
+        <div class="f-group">
+          <label for="bioName" style="font-size: 0.82rem; color: var(--text-secondary); display: block; margin-bottom: 5px;">الاسم واللقب <span style="color: #ff334b;">*</span></label>
+          <input type="text" id="bioName" class="f-input" placeholder="كيف نناديك؟" required>
+        </div>
+
+        <div class="f-group">
+          <label for="bioEmail" style="font-size: 0.82rem; color: var(--text-secondary); display: block; margin-bottom: 5px;">رقم الهاتف أو البريد الإلكتروني <span style="color: #ff334b;">*</span></label>
+          <input type="text" id="bioEmail" class="f-input" placeholder="0550 00 00 00 أو البريد الإلكتروني" required>
+        </div>
+
+        <div class="f-group">
+          <label for="bioMessage" style="font-size: 0.82rem; color: var(--text-secondary); display: block; margin-bottom: 5px;">نص الرسالة أو الاستفسار <span style="color: #ff334b;">*</span></label>
+          <textarea id="bioMessage" rows="3" class="f-input f-area" placeholder="اكتب رسالتك أو استفسارك هنا..." required></textarea>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <button type="submit" id="bioSubmitBtn" class="btn-bio-submit">
+            <span>إرسال الرسالة</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </form>
+    </section>
+
+
+    <!-- ========================================================
+         FOOTER — BIO LINK SIGNATURE
+         ======================================================== -->
+    <footer class="biolink-footer">
+      <div class="footer-neon-line" aria-hidden="true"></div>
+      
+      <div class="footer-logo-badge">
+        <img src="assets/logo.png" alt="شعار أيمن — AYMO" class="footer-official-logo" width="80" height="80">
+      </div>
+
+      <h4 class="footer-brand-title">AYMEN | AYMO</h4>
+      <p class="footer-brand-ar">أيمن — مؤلف رواية بذرة الأمل</p>
+      <p class="footer-quote">"أول وأصغر كاتب في الجزائر يؤلف رواية بذرة الأمل"</p>
+
+      <!-- Bottom Mini Social Links Row -->
+      <div class="footer-social-row">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/qr/SSEPKBSWPJ5WE1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.031 0C5.396 0 .029 5.367.029 11.987c0 2.112.551 4.175 1.597 5.99L0 24l6.208-1.598c1.745.952 3.717 1.455 5.823 1.455 6.635 0 12.002-5.367 12.002-11.987C24.033 5.367 18.666 0 12.031 0zm0 21.84c-1.85 0-3.666-.497-5.253-1.44l-.377-.224-3.899 1.002 1.042-3.799-.246-.392a9.92 9.92 0 0 1-1.523-5.001c0-5.485 4.464-9.949 9.956-9.949 2.658 0 5.157 1.035 7.037 2.915a9.89 9.89 0 0 1 2.915 7.034c0 5.485-4.464 9.949-9.956 9.949zm5.457-7.464c-.299-.15-1.77-.873-2.044-.973-.274-.1-.473-.15-.672.15-.199.299-.772.973-.946 1.173-.174.199-.349.224-.648.075-.299-.15-1.263-.466-2.406-1.485-.889-.793-1.489-1.773-1.663-2.072-.174-.299-.019-.461.13-.61.134-.134.299-.349.448-.523.149-.174.199-.299.299-.498.1-.199.05-.374-.025-.523-.075-.15-.672-1.62-.921-2.219-.242-.583-.487-.504-.672-.513l-.573-.01c-.199 0-.523.075-.797.374-.274.299-1.046 1.022-1.046 2.493 0 1.471 1.071 2.891 1.221 3.09 1.495 1.994 3.493 3.42 5.378 4.148 2.05.793 2.846.721 3.864.57 1.121-.166 2.443-1.001 2.787-1.968.344-.967.344-1.794.244-1.968-.1-.174-.299-.274-.598-.424z"/>
+          </svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/aymo_off?psln=MXh0Z3dya2R1b2Yzcg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <!-- Snapchat -->
+        <a href="https://www.snapchat.com/add/aymench2010?share_id=mKWN4h8Y4iQ&locale=ar-DZ" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.225-.061.524.122.868l.015.016c.06.136 1.535 3.494 4.817 4.037.421.075.565.435.421.721-.24.48-1.278.835-3.163 1.073-.059.091-.12.378-.165.574-.029.18-.075.361-.134.555-.075.271-.271.406-.556.406h-.03c-.15 0-.33-.03-.54-.075a6.002 6.002 0 0 1-1.279-.135c-.3 0-.6.015-.915.075-.602.105-1.13.466-1.733.886-.857.601-1.833 1.294-3.31 1.294-.06 0-.12-.015-.18-.015h-.15c-1.477 0-2.453-.678-3.31-1.294-.602-.42-1.131-.781-1.734-.886-.315-.06-.615-.075-.915-.075-.375 0-.705.045-.93 0-.21-.03-.39-.075-.54-.15a.56.56 0 0 1-.3-.421c-.06-.192-.09-.39-.135-.57-.045-.183-.106-.495-.166-.573-1.928-.224-2.968-.578-3.208-1.231-.076-.21-.055-.495.165-.676 3.282-.543 4.757-3.901 4.818-4.037l.015-.03c.182-.345.227-.65.121-.873-.195-.436-.889-.66-1.348-.812-.136-.044-.256-.089-.346-.12-.824-.329-1.228-.719-1.213-1.168 0-.36.285-.689.735-.838.15-.061.327-.09.508-.09.12 0 .3.016.465.104.374.181.633.285.934.301.198 0 .326-.045.401-.09-.008-.165-.018-.33-.031-.51l-.002-.06C4.412 8.073 4.286 6.047 4.815 4.854 6.398 1.309 9.755 1.033 12.002 1.033h.204Z"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/share/1BK8o17vcD/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+      </div>
+
+      <div class="footer-credits">
+        <span class="algeria-badge">Made with passion in Algeria 🇩🇿</span>
+        <p class="copyright">&copy; <span id="currentYear">2026</span> AYMEN (AYMO). جميع الحقوق محفوظة.</p>
+        <div class="footer-powered">
+          <span>Official Bio Link •</span>
+          <a href="https://www.instagram.com/aymo_off?psln=MXh0Z3dya2R1b2Yzcg==" target="_blank" rel="noopener noreferrer" class="powered-link">
+            <span>@aymo_off</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- End Bio Link Wrapper -->
+
+  <!-- ========================================================
+       ORDER FORM MODAL (استمارة طلب رواية بذرة الأمل)
+       ======================================================== -->
+  <div id="orderModal" class="order-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+    <div class="order-modal-box">
+      <div class="modal-mobile-handle" aria-hidden="true"></div>
+      <button type="button" class="order-modal-close" id="closeOrderModalBtn" aria-label="إغلاق">&times;</button>
+      
+      <!-- Form Content -->
+      <form id="novelOrderForm" novalidate>
+        
+        <!-- 1. بياناتك الشخصية -->
+        <div class="order-form-step">
+          <div class="step-header">
+            <span class="step-num">١</span>
+            <h3 class="step-title" id="orderModalTitle">بياناتك الشخصية</h3>
+          </div>
+
+          <div class="form-row-2">
+            <div class="field-group">
+              <label class="field-label" for="orderFullName">الاسم واللقب <span class="req-star">*</span></label>
+              <input type="text" id="orderFullName" class="field-input" placeholder="كيف نناديك؟" required>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="orderPhone">رقم الهاتف <span class="req-star">*</span></label>
+              <input type="tel" id="orderPhone" class="field-input" placeholder="0550 00 00 00" dir="ltr" style="text-align: right;" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. أين نوصل كتابك؟ -->
+        <div class="order-form-step">
+          <div class="step-header">
+            <span class="step-num">٢</span>
+            <h3 class="step-title">أين نوصل كتابك؟</h3>
+          </div>
+
+          <!-- اختيار البلد -->
+          <div class="field-group">
+            <label class="field-label">اختيار البلد</label>
+            <div class="country-cards-row">
+              <div class="country-card active" id="countryDzCard">
+                <div class="country-card-info">
+                  <span class="country-card-name">الجزائر</span>
+                  <span class="country-card-sub">متوفر</span>
+                </div>
+                <div class="country-card-radio"></div>
+              </div>
+              <div class="country-card disabled" title="قريباً للشحن الدولي">
+                <div class="country-card-info">
+                  <span class="country-card-name">خارج الجزائر</span>
+                  <span class="country-card-sub">Coming soon</span>
+                </div>
+                <div class="country-card-radio" style="border-color:#ccc;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- الولاية -->
+          <div class="field-group">
+            <label class="field-label" for="orderWilaya">الولاية <span class="req-star">*</span></label>
+            <select id="orderWilaya" class="field-select" required>
+              <option value="" disabled selected>اختر ولايتك (58 ولاية)</option>
+              <option value="01" data-code="01">01 - أدرار (Adrar)</option>
+              <option value="02" data-code="02">02 - الشلف (Chlef)</option>
+              <option value="03" data-code="03">03 - الأغواط (Laghouat)</option>
+              <option value="04" data-code="04">04 - أم البواقي (Oum El Bouaghi)</option>
+              <option value="05" data-code="05">05 - باتنة (Batna)</option>
+              <option value="06" data-code="06">06 - بجاية (Béjaïa)</option>
+              <option value="07" data-code="07">07 - بسكرة (Biskra)</option>
+              <option value="08" data-code="08">08 - بشار (Béchar)</option>
+              <option value="09" data-code="09">09 - البليدة (Blida)</option>
+              <option value="10" data-code="10">10 - البويرة (Bouira)</option>
+              <option value="11" data-code="11">11 - تمنراست (Tamanrasset)</option>
+              <option value="12" data-code="12">12 - تبسة (Tébessa)</option>
+              <option value="13" data-code="13">13 - تلمسان (Tlemcen)</option>
+              <option value="14" data-code="14">14 - تيارت (Tiaret)</option>
+              <option value="15" data-code="15">15 - تيزي وزو (Tizi Ouzou)</option>
+              <option value="16" data-code="16">16 - الجزائر العاصمة (Alger)</option>
+              <option value="17" data-code="17">17 - الجلفة (Djelfa)</option>
+              <option value="18" data-code="18">18 - جيجل (Jijel)</option>
+              <option value="19" data-code="19">19 - سطيف (Sétif)</option>
+              <option value="20" data-code="20">20 - سعيدة (Saïda)</option>
+              <option value="21" data-code="21">21 - سكيكدة (Skikda)</option>
+              <option value="22" data-code="22">22 - سيدي بلعباس (Sidi Bel Abbès)</option>
+              <option value="23" data-code="23">23 - عنابة (Annaba)</option>
+              <option value="24" data-code="24">24 - قالمة (Guelma)</option>
+              <option value="25" data-code="25">25 - قسنطينة (Constantine)</option>
+              <option value="26" data-code="26">26 - المدية (Médéa)</option>
+              <option value="27" data-code="27">27 - مستغانم (Mostaganem)</option>
+              <option value="28" data-code="28">28 - المسيلة (M'Sila)</option>
+              <option value="29" data-code="29">29 - معسكر (Mascara)</option>
+              <option value="30" data-code="30">30 - ورقلة (Ouargla)</option>
+              <option value="31" data-code="31">31 - وهران (Oran)</option>
+              <option value="32" data-code="32">32 - البيض (El Bayadh)</option>
+              <option value="33" data-code="33">33 - إليزي (Illizi)</option>
+              <option value="34" data-code="34">34 - برج بوعريريج (Bordj Bou Arréridj)</option>
+              <option value="35" data-code="35">35 - بومرداس (Boumerdès)</option>
+              <option value="36" data-code="36">36 - الطارف (El Tarf)</option>
+              <option value="37" data-code="37">37 - تندوف (Tindouf)</option>
+              <option value="38" data-code="38">38 - تيسمسيلت (Tissemsilt)</option>
+              <option value="39" data-code="39">39 - الوادي (El Oued)</option>
+              <option value="40" data-code="40">40 - خنشلة (Khenchela)</option>
+              <option value="41" data-code="41">41 - سوق أهراس (Souk Ahras)</option>
+              <option value="42" data-code="42">42 - تيبازة (Tipaza)</option>
+              <option value="43" data-code="43">43 - ميلة (Mila)</option>
+              <option value="44" data-code="44">44 - عين الدفلى (Aïn Defla)</option>
+              <option value="45" data-code="45">45 - النعامة (Naâma)</option>
+              <option value="46" data-code="46">46 - عين تموشنت (Aïn Témouchent)</option>
+              <option value="47" data-code="47">47 - غرداية (Ghardaïa)</option>
+              <option value="48" data-code="48">48 - غليزان (Relizane)</option>
+              <option value="49" data-code="49">49 - تيميمون (Timimoun)</option>
+              <option value="50" data-code="50">50 - برج باجي مختار (Bordj Badji Mokhtar)</option>
+              <option value="51" data-code="51">51 - أولاد جلال (Ouled Djellal)</option>
+              <option value="52" data-code="52">52 - بني عباس (Béni Abbès)</option>
+              <option value="53" data-code="53">53 - عين صالح (In Salah)</option>
+              <option value="54" data-code="54">54 - عين قزام (In Guezzam)</option>
+              <option value="55" data-code="55">55 - توقرت (Touggourt)</option>
+              <option value="56" data-code="56">56 - جانت (Djanet)</option>
+              <option value="57" data-code="57">57 - المغير (El M'Ghair)</option>
+              <option value="58" data-code="58">58 - المنيعة (El Meniaa)</option>
+            </select>
+          </div>
+
+          <!-- طريقة التوصيل -->
+          <div class="field-group">
+            <label class="field-label">طريقة التوصيل <span class="req-star">*</span></label>
+            <div class="delivery-cards-row">
+              <!-- Home Delivery -->
+              <div class="delivery-card active" id="deliveryHomeCard" data-method="home">
+                <span class="delivery-card-icon">🏠</span>
+                <div class="delivery-card-text">
+                  <div class="delivery-card-title">التوصيل إلى المنزل</div>
+                  <div class="delivery-card-desc" id="homePriceLabel">اختر الولاية لعرض السعر</div>
+                </div>
+                <div class="delivery-card-radio"></div>
+              </div>
+              <!-- Stop Desk Delivery -->
+              <div class="delivery-card" id="deliveryDeskCard" data-method="desk">
+                <span class="delivery-card-icon">📍</span>
+                <div class="delivery-card-text">
+                  <div class="delivery-card-title">التوصيل إلى مكتب (Stop Desk)</div>
+                  <div class="delivery-card-desc" id="deskPriceLabel">اختر الولاية لعرض السعر</div>
+                </div>
+                <div class="delivery-card-radio"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- البلدية -->
+          <div class="field-group">
+            <label class="field-label" for="orderCommune">البلدية <span class="req-star">*</span></label>
+            <input type="text" id="orderCommune" class="field-input" placeholder="اكتب اسم البلدية" required>
+          </div>
+
+          <!-- العنوان الكامل -->
+          <div class="field-group">
+            <label class="field-label" for="orderAddress">العنوان الكامل <span class="req-star">*</span></label>
+            <input type="text" id="orderAddress" class="field-input" placeholder="الحي، الشارع، رقم المنزل..." required>
+          </div>
+
+          <!-- Security Note -->
+          <div class="security-notice">
+            <span>🔒</span>
+            <span>نستخدم بياناتك فقط لتأكيد طلبك وتوصيله.</span>
+          </div>
+        </div>
+
+        <!-- 3. المجموع وتأكيد الطلب -->
+        <div class="order-summary-card">
+          
+          <!-- Quantity -->
+          <div class="summary-line">
+            <span class="sum-label">الكمية</span>
+            <div class="qty-counter-box">
+              <button type="button" class="qty-btn" id="qtyMinusBtn">-</button>
+              <span class="qty-num" id="orderQtyVal">1</span>
+              <button type="button" class="qty-btn" id="qtyPlusBtn">+</button>
+            </div>
+          </div>
+
+          <!-- Book Price -->
+          <div class="summary-line">
+            <span class="sum-label">مجموع الكتب</span>
+            <span class="sum-val" id="orderBooksPrice">1.100 دج</span>
+          </div>
+
+          <!-- Shipping Cost -->
+          <div class="summary-line">
+            <span class="sum-label">رسوم التوصيل</span>
+            <span class="sum-val" id="orderShippingCost">اختر الولاية</span>
+          </div>
+
+          <!-- Total -->
+          <div class="summary-line summary-line-total">
+            <span class="sum-label">المجموع</span>
+            <span class="sum-val" id="orderTotalCost">1.100 دج</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-confirm-order" id="submitOrderBtn">
+            <span>تأكيد الطلب</span>
+            <span>&larr;</span>
+          </button>
+
+          <p class="order-btn-subnote">أكمل بياناتك واختر طريقة توصيل متاحة لتأكيد الطلب.</p>
+        </div>
+
+      </form>
+
+      <!-- Success Screen (Shown upon submit) -->
+      <div id="orderSuccessScreen" class="order-success-box">
+        <div class="success-icon-badge">✓</div>
+        <h3 class="order-success-title">تم تسجيل طلبك بنجاح!</h3>
+        <p class="order-success-desc">
+          شكراً لك <strong id="successCustomerName"></strong>!<br>
+          تم استلام طلب رواية <strong>"بذرة الأمل"</strong> بنجاح.<br>
+          سيتصل بك فريقنا هاتفياً على الرقم <strong id="successCustomerPhone" dir="ltr"></strong> لتأكيد الشحن والتوصيل.
+        </p>
+
+        <div style="margin-bottom: 20px;">
+          <a id="successWaLink" href="https://wa.me/qr/SSEPKBSWPJ5WE1" target="_blank" rel="noopener noreferrer" class="btn-wa-order-share">
+            <span>إرسال تفاصيل الطلب عبر واتساب 💬</span>
+          </a>
+        </div>
+
+        <button type="button" class="btn-mini-order" id="resetOrderBtn" style="padding: 8px 16px; background: #eee; color: #333; border:none; cursor:pointer;">
+          <span>طلب نسخة أخرى</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast-popup" role="alert" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toastMessage">تم نسخ الرابط بنجاح!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

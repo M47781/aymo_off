@@ -1,0 +1,18 @@
+{
+  "name": "aymo-bio-link",
+  "version": "1.0.0",
+  "description": "Official Bio Link for Aymen (AYMO) - مؤلف رواية بذرة الأمل",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "open": "powershell -Command Start-Process index.html"
+  },
+  "keywords": [
+    "biolink",
+    "aymo",
+    "aymo_off",
+    "badrat-alamal"
+  ],
+  "author": "Aymen | AYMO",
+  "license": "ISC"
+}
